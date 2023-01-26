@@ -31,9 +31,11 @@ const handlePastedEl = (e) => {
             span.innerHTML = letter
             wordScreenEl.appendChild(span)
         })
+        startBtn.style.background = "darkgreen"
     }
     else {
         inputTextPastedEl.style.opacity = "1" // style issu
+        startBtn.style.background = "gray"
     }
 }
 
@@ -42,6 +44,7 @@ const handlePastedEl = (e) => {
 inputEl.style.visibility="hidden"
 inputEl.disabled = true; // disable input by default
 inputEl.onpaste = e => e.preventDefault(); // prevent paste in input filed
+startBtn.style.background = "gray"
 const handleInputChange = (e) => {
     let inputVal = e.target.value
     if (inputVal[counter] === wordScreenEl.innerText[counter]) {
@@ -94,7 +97,7 @@ const handleReset = () => {
     startBtn.disabled = false;
     inputEl.disabled = true; // disable typing untill start first
     inputEl.style.background = "#000"
-    startBtn.style.background = "darkgreen"
+    startBtn.style.background = "gray"
     startBtn.innerText = "Start"
     timerEl.innerHTML = ""
     clearInterval(timerInterval)
