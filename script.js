@@ -39,6 +39,7 @@ const handlePastedEl = (e) => {
 
 
 // handle my input
+inputEl.style.visibility="hidden"
 inputEl.disabled = true; // disable input by default
 inputEl.onpaste = e => e.preventDefault(); // prevent paste in input filed
 const handleInputChange = (e) => {
@@ -68,6 +69,7 @@ const handleStart = () => {
         alert('must be greater than 20 letters')
     }
     else {
+        inputEl.style.visibility="visible"
         inputEl.disabled = false;
         startBtn.disabled = true;
         inputEl.focus() // auto focus on input after start
@@ -83,6 +85,7 @@ const handleStart = () => {
 
 // handle resetting
 const handleReset = () => {
+    inputEl.style.visibility="hidden"
     wordScreenEl.innerHTML = ""
     inputTextPastedEl.value = ""
     inputEl.value = ""
