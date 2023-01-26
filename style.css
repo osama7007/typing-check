@@ -54,16 +54,16 @@ input:focus{
     padding: 10px;
     width: 60vw;
     height: 50px;
-    background: rgb(144, 144, 144);
+    background: #E8F0FE;
     border-radius: 5px;
-    color: white;
     font-size: 20px;
+    color: #000;
     font-weight: bold;
     letter-spacing: 2px;
 }
 .reset-btn {
     margin-top: 20px;
-    background-color: #505050;
+    background-color:darkred;
     border: 1px solid #ADADAD;
     padding: 10px 20px;
     font-size: 14px;
@@ -71,4 +71,27 @@ input:focus{
     text-transform: uppercase;
     color: #FFFFFF;
     cursor: pointer;
+    border:5px;
+    margin:10px
+}
+.start-btn {
+    margin-top: 20px;
+    background-color: darkgreen;
+    border: 1px solid #ADADAD;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    border:5px;
+    margin:10px;
+}
+.btn:hover{
+    opacity: .8;
+    transform: scale(1.05);
+    transition: all .1s;
+}
+p{
+    display: inline;
 }
